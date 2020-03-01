@@ -1,7 +1,7 @@
 ##########################################
 ########### Management VPC  ##############
 ##########################################
-
+/*
 # Create a VPC for the Management Server
 resource "aws_vpc" "management_vpc" {
   cidr_block            = "${var.management_cidr_vpc}"
@@ -44,7 +44,7 @@ resource "aws_security_group" "management_security_group" {
     Name   = "${var.project_name}-Management-SG"
   }
 }
-
+*/
 ##########################################
 ########### Outbound VPC  ################
 ##########################################

@@ -19,6 +19,7 @@ resource "aws_ec2_transit_gateway" "transit_gateway" {
 #####################################
 
 # Attach the Management VPC to the TGW
+/*
 resource "aws_ec2_transit_gateway_vpc_attachment" "management_transit_gateway_vpc_attachment" {
   subnet_ids         = ["${aws_subnet.management_subnet.id}"]
   transit_gateway_id = "${aws_ec2_transit_gateway.transit_gateway.id}"
@@ -30,7 +31,7 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "management_transit_gateway_vp
     Name = "${var.project_name}-Management-TGW-Attachment"
   }
 } 
-
+*/
 #####################################
 ######### Outbound VPC ##############
 #####################################

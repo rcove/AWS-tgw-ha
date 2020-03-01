@@ -1,7 +1,7 @@
 ##########################################
 ########### Management VPC  ##############
 ##########################################
-
+/*
 # Create subnets to launch our instances into
 resource "aws_subnet" "management_subnet" {
   vpc_id            = "${aws_vpc.management_vpc.id}"
@@ -12,7 +12,7 @@ resource "aws_subnet" "management_subnet" {
     Name = "${var.project_name}-Management"
   }
 }
-
+*/
 ########################################
 ########### Outbound VPC  ##############
 ########################################
