@@ -74,13 +74,12 @@ resource "aws_cloudformation_stack" "checkpoint_tgw_cloudformation_stack" {
     SICKey                                 = "${var.sic_key}"
 
  }
+
+# CloudGuard Transit Gateway High Availability for AWS R80.40 Administration Guide
+# https://sc1.checkpoint.com/documents/IaaS/WebAdminGuides/EN/CP_CloudGuard_for_AWS_Transit_Gateway_High_Availability/Content/Topics/Overview.htm
   template_url        = "https://cloudformationstaging.s3.amazonaws.com/checkpoint-tgw-ha-master.yaml"
 #  template_url        = "https://s3.amazonaws.com/CloudFormationTemplate/checkpoint-tgw-asg-master.yaml"
   capabilities        = ["CAPABILITY_IAM"]
   disable_rollback    = true
   timeout_in_minutes  = 50
 }
-# https://cloudformationstaging.s3.amazonaws.com/geo-cluster-into-vpc.yaml
-# https://cloudformationstaging.s3.amazonaws.com/geo-cluster.yaml
-# https://cloudformationstaging.s3.amazonaws.com/checkpoint-tgw-ha-master.yaml
-# https://cloudformationstaging.s3.amazonaws.com/checkpoint-tgw-ha.yaml

@@ -52,7 +52,7 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "outbound_transit_gateway_vpc_
 #####################################
 ######### Inbound VPC ###############
 #####################################
-
+/*
 # Attach the Inbound Seucirty VPC to the TGW
 resource "aws_ec2_transit_gateway_vpc_attachment" "inbound_transit_gateway_vpc_attachment" {
   subnet_ids         = ["${aws_subnet.inbound_subnet.*.id}"]
@@ -65,7 +65,7 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "inbound_transit_gateway_vpc_a
     Name = "${var.project_name}-Inbound-TGW-Attachment"
   }
 } 
-
+*/
 #####################################
 ######### Spoke-1 VPC ###############
 #####################################
@@ -81,7 +81,7 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "spoke_1_transit_gateway_vpc_a
     Name = "${var.project_name}-Spoke-1-TGW-Attachment"
   }
 }
-
+/*
 #####################################
 ######### Spoke-1a VPC ###############
 #####################################
@@ -97,12 +97,12 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "spoke_1a_transit_gateway_vpc_
     Name = "${var.project_name}-Spoke-1a-TGW-Attachment"
   }
 }
-
+*/
 #####################################
 ######### Spoke-2 VPC ###############
 #####################################
 
-# Attach Spoek-2 VPC to the TGW
+# Attach Spoke-2 VPC to the TGW
 resource "aws_ec2_transit_gateway_vpc_attachment" "spoke_2_transit_gateway_vpc_attachment" {
   subnet_ids         = ["${aws_subnet.spoke_2_external_subnet.id}"]
   transit_gateway_id = "${aws_ec2_transit_gateway.transit_gateway.id}"

@@ -56,7 +56,7 @@ data "aws_vpc" "data_outbound_asg_vpc" {
   }
   depends_on = ["aws_cloudformation_stack.checkpoint_tgw_cloudformation_stack"]
 }
-
+/*
 ##########################################
 ########### Inbound VPC  #################
 ##########################################
@@ -103,7 +103,7 @@ resource "aws_security_group" "inbound_security_group" {
     Name   = "${var.project_name}-Inbound-SG"
   }
 }
-
+*/
 ######################################
 ########### Spoke-1 VPC  #############
 ######################################
@@ -155,7 +155,7 @@ resource "aws_security_group" "spoke_1_security_group" {
     Name   = "${var.project_name}-Spoke-1-SG"
   }  
 }
-
+/*
 ######################################
 ########### Spoke-1a VPC  #############
 ######################################
@@ -207,7 +207,7 @@ resource "aws_security_group" "spoke_1a_security_group" {
     Name   = "${var.project_name}-Spoke-1a-SG"
   }  
 }
-
+*/
 ######################################
 ########### Spoke-2 VPC  #############
 ######################################

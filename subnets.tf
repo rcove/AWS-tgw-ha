@@ -32,7 +32,7 @@ data "aws_subnet" "outbound_subnet" {
   id    = "${data.aws_subnet_ids.outbound_subnet_ids.ids[count.index]}"
 }
 
-
+/*
 #######################################
 ########### Inbound VPC  ##############
 #######################################
@@ -48,7 +48,7 @@ resource "aws_subnet" "inbound_subnet" {
     Name = "${var.project_name}-Inbound-${count.index+1}"
   }
 }
-
+*/
 #####################################
 ########### Spoke-1 VPC  ############
 #####################################
@@ -80,6 +80,7 @@ resource "aws_subnet" "spoke_2_external_subnet" {
 }
 
 
+/*
 #####################################
 ########### Spoke-1a VPC  ############
 #####################################
@@ -95,3 +96,4 @@ resource "aws_subnet" "spoke_1a_external_subnet" {
     Name = "${var.project_name}-Spoke-1a-External-${count.index+1}"
   }
 }
+*/
